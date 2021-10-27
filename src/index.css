@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img {
+  max-width: 100%;
+  width: auto;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: normal;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.btn {
+  font-size: 14px;
+  padding: 12px 20px;
+  background: #2243b5;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.formWrapper {
+  text-align: center;
+  padding-top: 50px;
+}
+.formWrapper form {
+  max-width: 792px;
+  margin: auto;
+  padding: 50px;
+  box-shadow: 0 0 10px rgb(51 51 51 / 10%);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.formRow {
+  display: flex;
+  flex-direction: row;
+}
+.leftSecton {
+  flex-basis: 230px;
+  padding-right: 30px;
+  margin-right: 30px;
+  border-right: 1px solid #f3f3f3;
+}
+.rightSecton {
+  flex: 1;
+}
+.inputItem {
+  padding-bottom: 15px;
+}
+.inputItem input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #f3f3f3;
+  padding: 0 20px;
+  font-size: 14px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+.rightSecton .inputItem textarea {
+  height: 100px;
+  width: 100%;
+  border: 1px solid #f3f3f3;
+  resize: none;
+  font-size: 14px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.buttonRow .formText {
+  flex: 1;
+  padding-right: 15px;
+}
+.buttonRow .formText p {
+  font-size: 14px;
+  text-align: left;
+  margin: 0;
+}
+.buttonRow .SubmitButton {
+  cursor: pointer;
+  font-weight: bold;
+}
+.SubmitButton:hover {
+  color: #fff;
+}
+.home-button {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: -10px;
+  text-transform: initial;
+}
+.home-button:hover {
+  color: #fff;
+}
+.inputItem input:focus,
+.inputItem textarea:focus {
+  border: 1px solid #2243b5;
+}
+.rightSecton .inputItem input:focus-visible,
+.rightSecton .inputItem textarea:focus-visible {
+  outline: 0;
+}
+.image-box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-wrapper {
+  padding: 15px;
+}
+.create-wrapper {
+  padding: 30px 15px;
+  box-shadow: 0 0 10px rgb(51 51 51 / 10%);
+  border-radius: 10px;
+}
+.create-submit-button {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create-submit-button .SubmitButton {
+  margin: 0 15px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .formRow {
+    flex-direction: column;
+  }
+    .leftSecton {
+      flex-basis: auto;
+      padding-right: 0;
+      margin-right: 0;
+      border-right: 0;
+      margin-bottom: 10px;
+  }
+  .image-box {
+    margin: 0 auto 10px;
+} 
+.formWrapper form {
+  padding: 50px 15px;
+  margin: 0 15px;
+}
+ }
