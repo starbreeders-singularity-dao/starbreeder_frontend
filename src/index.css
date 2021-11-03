@@ -105,11 +105,15 @@ code {
 .SubmitButton:hover {
   color: #fff;
 }
+.SubmitButton {
+  font-weight: bold;
+}
 .home-button {
   font-weight: bold;
   font-size: 13px;
   margin-top: -10px;
   text-transform: initial;
+  padding: 9px 20px;
 }
 .home-button:hover {
   color: #fff;

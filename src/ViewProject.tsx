@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { useWallet, useConnectedWallet } from '@starterra/starterra-tool-dapp'
 import { LCDClient } from '@terra-money/terra.js';
 import { useEffect } from 'react';
-import BackProjectScreen from './BackProjectScreen';
 import { IProject } from './IProject';
 import { Link, useParams } from 'react-router-dom';
+import ViewProjectScreen from './ViewProjectScreen';
 
-const SmartContractConnection = () => {
+const ViewProject = () => {
   const { network } = useWallet()
   const connectedWallet = useConnectedWallet()
   const params :any = useParams();
@@ -31,28 +31,10 @@ const SmartContractConnection = () => {
 
   useEffect(() => {
     (async () => {
-      let project_id = 5;
-      if (params?.id) {
-        project_id = params?.id;
-      }
-      const result: any = await terra.wasm.contractQuery(
-        "terra1rzy6g86xpysmkchcxw3ht6f6ch8hzg28v0r7tp",
-        { get_project: { "id": Number(project_id) } }
-      );
-      setProject(result);
-    })()
-  }, []);
-
-  useEffect(() => {
-    (async () => {
       console.log(params?.id)
-      let project_id = 5;
-      if (params?.id) {
-        project_id = params?.id;
-      }
       const result: any = await terra.wasm.contractQuery(
         "terra1rzy6g86xpysmkchcxw3ht6f6ch8hzg28v0r7tp",
-        { get_project: { "id": Number(project_id) } }
+        { get_project: { "id": Number(params?.id) } }
       );
       console.log(result)
       setProject(result);
@@ -68,9 +50,9 @@ const SmartContractConnection = () => {
         <p ><strong>You are connected with </strong>: {network.name}</p>
         <p><strong> Your {network.name} address is </strong>: {connectedWallet?.terraAddress}</p>
       </div>
-      <BackProjectScreen {...project} />
+      <ViewProjectScreen {...project} />
     </div>
   )
 }
 
-export default SmartContractConnection;
+export default ViewProject;

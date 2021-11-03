@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom'
 import CreateProjectScreen from './CreateProjectScreen';
 import Home from './Home';
+import ViewProject from './ViewProject';
 
 function App() {
 
@@ -59,7 +60,9 @@ function App() {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/create-project" component={CreateProjectScreen} />
-              <Route path="/back-project" component={SmartContractConnection} />
+              <Route exact path="/back-project" component={SmartContractConnection} />
+              <Route exact path="/back-project/:id" component={SmartContractConnection} />
+              <Route exact path="/view-project/:id" component={ViewProject} />
             </Switch>
           </Router>
         </WalletProvider>

@@ -3,11 +3,14 @@ import { IProject } from './IProject';
 import { useWallet, useConnectedWallet } from '@starterra/starterra-tool-dapp'
 import { LCDClient } from '@terra-money/terra.js';
 import { MsgExecuteContract, CreateTxOptions } from '@terra-money/terra.js';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { TxResult } from '@terra-money/wallet-provider';
+import Loader from './Loader';
 
 const CreateProjectScreen: React.FC<IProject> = (props: IProject) => {
+    const [loading, setLoading] = useState(false);
     const [project, setProject] = useState<IProject>({
-        id: 8,
+        id: 0,
         thumbnail: "",
         title: "",
         description: "",
@@ -19,7 +22,7 @@ const CreateProjectScreen: React.FC<IProject> = (props: IProject) => {
         minimum_backers: "",
         minimum_budget: ""
     });
-
+    const history = useHistory();
     const {
         id,
         thumbnail,
@@ -40,14 +43,12 @@ const CreateProjectScreen: React.FC<IProject> = (props: IProject) => {
     }
 
     const { network } = useWallet();
-
     const connectedWallet = useConnectedWallet();
     const terra = new LCDClient({
         URL: network.lcd,
         chainID: network.chainID,
         gasPrices: { uluna: 1 }
     });
-
     const _onClick = async (e: any) => {
         e.preventDefault()
         if (connectedWallet === undefined) {
@@ -55,6 +56,7 @@ const CreateProjectScreen: React.FC<IProject> = (props: IProject) => {
             return;
         }
         try {
+            setLoading(true);
             const executeMsg = {
                 create_project: {
                     "thumbnail": thumbnail,
@@ -88,10 +90,35 @@ const CreateProjectScreen: React.FC<IProject> = (props: IProject) => {
                     fee: signMsg.fee
                 }
 
-                const response = await connectedWallet.post(txOptions)
-                if (response) {
-                    alert("Project Created")
+                const request = (nextTxResult) => {  
+                    const uri = network.lcd.replaceAll('lcd', 'fcd');
+                    fetch(`${uri}/v1/tx/${nextTxResult.result.txhash}`).then((response) => response.json())
+                    .then((responseJSON) => {
+                       // do stuff with responseJSON here...
+                        console.log(responseJSON);
+                        if (responseJSON === null) {
+                            setTimeout(() => {
+                                request(nextTxResult)
+                            }, 5000)
+                        } else {
+                            const project_id = responseJSON?.logs[0]?.events?.filter(test => test.type === 'wasm')[0].attributes.filter(event => event.key === 'project_id')[0].value;
+                            console.log(project_id, "prince");
+                            setLoading(false);
+                            history.push(`/view-project/${project_id}`)
+                        }
+                    });
                 }
+
+                connectedWallet.post(txOptions).then(async (nextTxResult: TxResult) => {
+                    console.log(nextTxResult, "Prince");
+                    console.log(nextTxResult.result.txhash, "Prince");
+                    // const project_id = response?.body?.logs[0]?.events?.filter(test => test.type === 'wasm')[0].attributes.filter(event => event.key === 'project_id')[0].value;
+                    // console.log(project_id, "prince");
+                    request(nextTxResult);
+                  })
+                  .catch((error: unknown) => {
+                      console.log(error);
+                  });
             }
         } catch (error) {
             console.log(error);
@@ -99,6 +126,7 @@ const CreateProjectScreen: React.FC<IProject> = (props: IProject) => {
     };
     return (
         <>
+            {loading && <Loader /> }
             <div className="address-wrapper">
                 <Link to="/">
                     <button className="btn home-button">Home</button>
