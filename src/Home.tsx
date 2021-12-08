@@ -6,10 +6,10 @@ const Home = () => {
         <div className="create-submit-button">
             <div className="create-wrapper">
                 <Link to="/create-project">
-                    <button className="btn SubmitButton">Create Project</button>
+                    <button className="btn backProjectButton">Create Project</button>
                 </Link>
                 <Link to="/back-project">
-                    <button className="btn SubmitButton">Back Project</button>
+                    <button className="btn backProjectButton">Back Project</button>
                 </Link>
             </div>
         </div>

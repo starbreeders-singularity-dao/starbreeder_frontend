@@ -45,7 +45,7 @@ const ViewProject = () => {
     <div> 
       <div className="address-wrapper">
         <Link to="/">
-          <button className="btn home-button">Home</button>
+          <button className="btn home-button">PROJECT Home</button>
         </Link>
         <p ><strong>You are connected with </strong>: {network.name}</p>
         <p><strong> Your {network.name} address is </strong>: {connectedWallet?.terraAddress}</p>

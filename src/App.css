@@ -2,6 +2,8 @@
   text-align: left;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -9,8 +11,10 @@
 .rightSecton label {
   display: block;
   text-align: left;
-  font-size: 14px;
+  font-size: 37px;
   margin-bottom: 5px;
+  color: #fff200;
+  font-weight:400;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -39,5 +43,603 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: 'Bebas Neue', cursive;
+  background: transparent;
+}
+.form{
+  background-color: #b2aed6;
+  background: #2c28794a;
+ 
+}
+
+.form > label {
+ color:#fff200;
+}
+
+
+.topHdng {
+  width: 792px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+  .hdngRow{ display:inline-flex; width: 100%; padding: 0; margin: 0;}
+
+  .imgStar {background-image: url("./Images/star.png"); 
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 75px;
+    display: inline-flex;
+    margin: 0 20px 0 0;
+    vertical-align: bottom;
+}
+
+.topHdng h1{
+    display: inline-flex;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 45px;
+    font-weight: 400;
+    color: #a0108c;
+
+  }
+
+  .inputItem input {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #b511c3;
+    padding: 0 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.rightSecton .inputItem textarea {
+  height: 525px;
+  width: 100%;
+  border: 1px solid #b511c3;
+  resize: none;
+  font-size: 14px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+.colLeft{
+  margin: 0;
+  padding: 0 15px 0 0;
+  width: 50%;
+  float: left;
+}
+.colRight{
+  margin: 0;
+  padding: 0 0 0 15px;
+  width: 50%;
+  float: right;
+}
+
+.colRightCheckbox{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  float: right;
+}
+
+.colRightCheckbox input{
+  text-align: left;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 13px 10px 0 0;
+}
+
+.colRightCheckbox label{
+  text-align: left;
+  align-items: center;
+  float: left;
+  font-size: 21px;
+  margin: 7px 25px 0 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.setP {
+  display: inline-block;
+  text-align: right;
+  font-size: 37px;
+  color: #fff200;
+  width: 769px;
+  margin: 0 auto;
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px auto;
+  width: 1150px;
+  padding: 10px 15px ;
+}
+.imageBoxTwo .imageUploadLeft .image-box, .imageBoxTwo .imageUploadRight .image-box {
+  border: 0;
+}
+.formWrapper .backProjectButton{
+  margin-left: auto;
+}
+
+.createProjectButton {
+  display: inline-block;
+  margin: 0;
+  padding:0;
+  width: 230px;
+  height: 50px;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 400;
+  background-color: #fff200;
+  color: #922baa;
+  border: 1px solid #922baa;
+}
+
+.createProjectButton:hover{ 
+  background-color: #922baa;
+  color: #fff200;
+  border: 1px solid #922baa;
+}
+.projectForm .rightSecton {
+  max-width: calc(80% - 230px);
+}
+.projectForm .rightSecton .inputItem input {
+  text-align: right;
+  border: 1px solid #cfa65e;
+  font-size: 21px;
+  color: #fff200;
+  font-weight: 400;
+  background: #b511c3;
+  height: auto;
+  line-height: 25px;
+}
+
+.projectForm  .inputItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.projectForm  .inputItem label {
+  font-size: 21px;
+  flex-basis: 270px;
+  margin: 0;
+}
+
+.formBgColor{
+  background-color: #b293c4; 
+  max-width: 1150px !important;
+  background: #2c28794a;
+}
+
+.projectForm .leftSecton{
+  flex-basis: 500px;
+  padding-right: 30px;
+  margin-right: 30px;
+  border-right: 1px solid #f3f3f3;
+}
+
+.projectForm .image-box {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectTopHdng {
+  width: 1150px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-left: 12%;
+  
+}
+
+.projectTopHdng h1 {
+  display: inline-flex;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 45px;
+  font-weight: 400;
+  color: #a0108c;
+}
+
+.imageUploadLeft {width: 180px;
+  float: left;}
+
+  .imageUploadRight {width: 180px;
+    float: right;}
+
+  .imageUploadLeft label{color: #fff200; font-size: 33px;}
+
+  .imageUploadRight label{color: #fff200; font-size: 33px;}
+
+  .imageUploadLeft span{color: #fff200; font-size: 21px;}
+
+  .imageUploadRight span{color: #fff200; font-size: 21px;}
+
+  .secretButton{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 7px 0 7px 0;
+    background: #922baa;
+    border-radius: 16px;
+    border: 1px solid #fbf208;
+    color: #fbf208;
+    font-size: 21px;
+}
+
+.formBgColor h2{
+  display: inline-flex;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 45px;
+  font-weight: 400;
+  color: #fbf208;
+}
+
+.backProjectButton { 
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 230px;
+  height: 50px;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 400;
+  background-color: #fff200;
+  color: #922baa;
+  border: 1px solid #922baa;
+}
+
+.backProjectButton:hover {
+  background-color: #922baa;
+  color: #fff200;
+  border: 1px solid #922baa;
+}
+
+.MuiButton-containedPrimary{
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 230px !important;
+  height: 50px !important;
+  text-align: center !important;
+  font-size: 33px !important;
+  font-weight: 400 !important;
+  background-color: #fff200 !important;
+  color: #922baa !important;
+  border: 1px solid #922baa !important;
+  font-family: 'Bebas Neue', cursive !important; 
+}
+
+
+.MuiButton-containedPrimary:hover{
+  background-color: #922baa !important;
+  color: #fff200 !important;
+  border: 1px solid #922baa !important;
+  font-family: 'Bebas Neue', cursive !important;
+}
+
+.MuiButton-outlinedSecondary{
+  display: flex !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 230px !important;
+  height: 50px !important;
+  text-align: center !important;
+  font-size: 20px !important;
+  font-weight: 100 !important;
+  background-color: #fff200 !important;
+  color: #922baa !important;
+  border: 1px solid #922baa !important;
+  font-family: 'Bebas Neue', cursive !important; 
+}
+
+
+.MuiButton-outlinedSecondary:hover{
+  background-color: #922baa !important;
+  color: #fff200 !important;
+  border: 1px solid #922baa !important;
+  font-family: 'Bebas Neue', cursive !important;
+}
+
+.createProjectBg{ 
+ 
+width:100%; 
+height: 100%;
+background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backProjectBg{ 
+width:100%; 
+height: 100%;
+background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.MuiDialog-paperScrollPaper {
+  display: flex;
+  max-height: calc(100% - 64px);
+  flex-direction: column;
+  background-color: #8a83a9 !important;
+  border: 1px solid #8a83a9 !important;
+}
+
+.MuiIconButton-colorSecondary {
+  color: #fff200 !important;
+}
+
+.wallet-contect-options-title {
+  color: #fbf202 !important;
+  font-size: 24px !important;
+}
+
+.wallet-contect-options-title-second {
+  color: #9455a2 !important;
+}
+
+.MuiButton-outlinedSecondary { margin-bottom: 15px !important;}
+
+.WithStyles\(ForwardRef\(Button\)\)-root-2 {
+  color: #fff000 !important;
+  text-transform: uppercase;
+  background-color: #681cff !important;
+  border: 4px solid #681cff !important;
+}
+.MuiButtonBase-root .MuiSvgIcon-root {
+  color: #922baa !important;
+}
+.MuiButtonBase-root:hover .MuiSvgIcon-root {
+  color: #fff000 !important;
+}
+
+.MuiPaper-root {
+  color: #fbf202 !important;
+  border: 3px solid #fbf202f5 !important;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #25267f !important;
+}
+
+.WithStyles\(ForwardRef\(Button\)\)-root-5 {
+  color: #0107b6 !important;
+  width: 100%;
+  border: none;
+  height: 36px;
+  border-radius: 0px 0px 15px 15px !important;
+  text-transform: initial;
+  background-color:#bcb730d4 !important;
+}
+
+.MuiButton-textSecondary {
+  color: #fbf202 !important;
+}
+
+.WithStyles\(ForwardRef\(Button\)\)-root-1 {
+  text-transform: uppercase;
+  background-color: #681cff !important;
+}
+
+.MuiButton-outlinedPrimary {
+  color: #fbf202 !important;
+  border: 3px solid #fbf202 !important;
+  border-radius: 21px;
+}
+
+.homeP{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  color: #19469b;
+  font-size: 20px;
+}
+
+
+.home-button {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 0;
+  text-transform: initial;
+  padding: 9px 20px;
+  background-color: #fff200;
+  width: 188px;
+  height: 50px;
+  color: #922baa;
+  border: 1px solid #922baa;
+}
+
+.home-button:hover{ 
+  background-color: #922baa;
+color: #fff200;
+border: 1px solid #922baa;}
+
+.wallet-balance-section {
+  border-top: 1px solid #4e50d6 !important;
+}
+
+.wallet-balance-item {
+  border-bottom: 1px solid #4e50d6 !important;
+}
+
+.MuiInputBase-input{ border: 1px solid #b511c3;
+border-radius: 5px;}
+
+.MuiButton-contained.Mui-disabled{ display: flex !important;}
+
+.MuiDialogActions-root{justify-content: center;}
+
+.MuiButton-containedPrimary {margin-right: 5px !important;
+  margin-left: 5px !important;
+}
+
+.backProjectButton{margin: 0 0 10px 0;}
+
+@media screen and (min-width: 1024px) {
+
+  .projectTopHdng{ width: 100%;}
+
+  .formWrapper {
+    padding-top: 25px;
+}
+
+.formBgColor {
+  background-color: #b293c4;
+  max-width: 100%;
+  background: #2c28794a;
+}
+
+.buttonRow{ width: 100%;}
+
+}
+
+.MuiButtonBase-root {
+  background-color: #fbf202;
+}
+
+@media screen and (max-width: 1200px) {
+  .projectTopHdng, .buttonRow {
+    width: 100%;
+  }
+  .projectForm .rightSecton {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .projectForm .leftSecton{ flex-basis: 315px!important; }
+  .imageUploadRight, .imageUploadLeft {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .projectForm .leftSecton{ flex-basis: 215px!important; }
+}
+@media screen and (max-width: 767px) {
+  .rightSecton label {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  .setP, .topHdng, .colLeft, .colRight {
+    width: 100%;
+  }
+  .projectForm .leftSecton {
+    flex-basis: auto;
+    padding-right: 30px;
+    margin-right: 30px;
+    border-right: 0;
+    padding: 0;
+    margin: 0;
+    
+  }
+  .colLeft, .colRight  {
+    padding: 0;
+  }
+  .setP {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 0  ;
+  }
+  .projectTopHdng{ width: 100%;}
+
+  .formWrapper {
+    padding-top: 20px;
+  }
+  .backProjectButton, .createProjectButton, .home-button {
+    width: 180px;
+    height: 42px;
+    font-size: 30px;
+    padding: 0;
+  }
+  .createProjectButton{
+    margin: 0 15px 25px 0;
+  }
+  .formBgColor {
+    background-color: #b293c4;
+    max-width: 100%;
+    background: #2c28794a;
+  }
+  .buttonRow{ width: 100%;}
+  .MuiButtonBase-root { background-color: #681cff;}
+  .formBgColor h2{ font-size: 38px;}
+  .formWrapper form {
+    padding: 30px 10px;
+  }
+  .projectForm .rightSecton {
+    max-width: calc(100% - 230px);
+  }
+  .projectForm .rightSecton {
+    max-width: calc(100% - 0px);
+    margin-top: 30px;
+  }
+  .rightSecton .inputItem textarea {
+    height: 225px;
+  }
+  .imageUpload {
+    max-width: 300px;
+    margin: auto;
+  }
+  .create-wrapper {
+    margin: 0 15px;
+    background-color: #b2aed6;
+  background: #2c28794a;
+  }
+  .create-wrapper .home-button {
+    width: 100%;
+  }
+  .create-wrapper a {
+    display: block;
+  }
+  .MuiDialog-paper {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .imageUploadLeft, .imageUploadRight {
+    width: 50%;
+    float: left;
+    padding: 0 10px;
+  }
+  .imageUploadRight label, .imageUploadLeft label {
+    font-size: 23px;
+  }
+  .projectForm .inputItem label {
+    font-size: 16px;
+    flex-basis: 190px;
+  }
+  .formBgColor h2 {
+    font-size: 30px;
+  }
+  .imgStar {
+    width: 65px;
+    height: 48px;
+    margin: 0 12px 0 0;
+    vertical-align: middle;
+  }
+  .projectTopHdng h1 {
+    font-size: 30px;
+  }
+  .imageUploadLeft span, .imageUploadRight span {
+    font-size: 16px;
+  }
+  .wallet-contect-options-title-close {
+    top: 10px;
+    right: 0;
   }
 }

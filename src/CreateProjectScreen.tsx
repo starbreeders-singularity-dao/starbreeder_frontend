@@ -129,54 +129,88 @@ const CreateProjectScreen: React.FC<IProject> = (props: IProject) => {
             {loading && <Loader /> }
             <div className="address-wrapper">
                 <Link to="/">
-                    <button className="btn home-button">Home</button>
+                    <button className="btn home-button">PROJECT Home</button>
                 </Link>
             </div>
-            <div className="formWrapper">
-                <form>
+            <div className="formWrapper createProjectBg">
+                <div className="topHdng">
+                    <div className="imgStar"></div>
+                    <h1>START A PROJECT</h1>
+                </div>
+                <form className = "form">
                     <div className="formRow">
                         <div className="rightSecton">
-                            <label>Title</label>
+                            <label>ARTIST NAME</label>
                             <div className="inputItem">
-                                <input type="text" placeholder="Project title" name="title" value={title} onChange={onInputChange} />
+                                <input type="text"  name="title" />
                             </div>
-                            <label>Description</label>
+                            <label>BIO LINK</label>
                             <div className="inputItem">
-                                <textarea placeholder="Project Description (1000 signs)" name="description" value={description} onChange={onInputChange} />
+                                <input type="text"  name="title"  />
                             </div>
-                            <label>Link to full project details (IPFS)</label>
+                            <label>PROJECT TITLE</label>
                             <div className="inputItem">
-                                <input type="text" placeholder="Link to full project details (IPFS)" name="legal_contract" value={legal_contract} onChange={onInputChange} />
+                                <input type="text"  name="title" value={title} onChange={onInputChange} />
                             </div>
-                            <label>Project minimum budget</label>
+                            <label>PROJECT DESCRIPTION</label>
                             <div className="inputItem">
-                                <input type="text" placeholder="Project minimum budget" name="minimum_budget" value={minimum_budget} onChange={onInputChange} />
+                                <textarea name="description" value={description} onChange={onInputChange} />
                             </div>
-                            <label>Project minimum backers</label>
+                            <label>LINK TO FULL PROJECT DETAILS (IPFS)</label>
                             <div className="inputItem">
-                                <input type="text" placeholder="Project minimum backers" name="minimum_backers" value={minimum_backers} onChange={onInputChange} />
+                                <input type="text"  name="legal_contract" value={legal_contract} onChange={onInputChange} />
                             </div>
-                            <label>Backing amount</label>
+                            <label>PROJECT MINIMUM BUDGET</label>
                             <div className="inputItem">
-                                <input type="text" placeholder="Backing amount" />
+                                <input type="text"  name="minimum_budget" value={minimum_budget} onChange={onInputChange} />
                             </div>
-                            <label>Lockedip Period</label>
+                            <div className="colLeft">
+                                <label>MINIMUM BACKERS</label>
+                                <div className="inputItem">
+                                    <input type="text" name="minimum_backers" value={minimum_backers} onChange={onInputChange} />
+                                </div>
+                            </div>
+                            <div className="colRight">
+                                <label>BACKING AMOUNT</label>
+                                <div className="inputItem">
+                                    <input type="text"  />
+                                </div>
+                            </div>    
+                            <label>ESTIMATE FUND UNLOCK DATE</label>
+                            <div className="inputItem">
+                                <input type="text"  name="lockup_period" value={lockup_period} onChange={onInputChange} />
+                            </div>
+                            {/* <label>ESTIMATE FUND UNLOCK DATE</label>
                             <div className="inputItem">
                                 <input type="text" placeholder="Lockedip Period: xxx days/ dd mm yyyy " name="lockup_period" value={lockup_period} onChange={onInputChange} />
-                            </div>
-                            <label>Thumbnail</label>
-                            <div className="inputItem">
-                                <input type="text" placeholder="post thumbnail (link (ipfs))" name="thumbnail" value={thumbnail} onChange={onInputChange} />
-                            </div>
-                            <div className="buttonRow">
-                                <div className="formText">
+                            </div> */}
+                            <div className="colLeft">
+                                <label>THUMBNAIL</label>
+                                <div className="inputItem">
+                                    <input type="text"  name="thumbnail" value={thumbnail} onChange={onInputChange} />
                                 </div>
-                                <button className="btn SubmitButton" onClick={(e) => _onClick(e)}>Create Project</button>
+                            </div>    
+                            <div className="colRight">
+                                <label> NFT PLATFORM</label>
+                                <div className="colRightCheckbox">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+                                <label> TERRA NFT</label>
+                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
+                                    <label> SECERT NFT</label>
+                                </div>
+                               
                             </div>
+                            
                         </div>
                     </div>
                 </form>
-            </div >
+                <p className="setP">SET UP FEE : UST XX,-</p>
+                <div className="buttonRow">
+                <div className="formText">
+                </div>
+                <button className="btn createProjectButton" onClick={(e) => _onClick(e)}>Create Project</button>
+                </div>
+                </div>
         </>
     )
 }

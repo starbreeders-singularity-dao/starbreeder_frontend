@@ -63,10 +63,10 @@ const SmartContractConnection = () => {
     <div> 
       <div className="address-wrapper">
         <Link to="/">
-          <button className="btn home-button">Home</button>
+          <button className="btn backProjectButton">PROJECT HOME</button>
         </Link>
-        <p ><strong>You are connected with </strong>: {network.name}</p>
-        <p><strong> Your {network.name} address is </strong>: {connectedWallet?.terraAddress}</p>
+        <p className="homeP"><strong>You are connected with </strong>: {network.name}</p>
+        <p className="homeP"><strong> Your {network.name} address is </strong>: {connectedWallet?.terraAddress}</p>
       </div>
       <BackProjectScreen {...project} />
     </div>
